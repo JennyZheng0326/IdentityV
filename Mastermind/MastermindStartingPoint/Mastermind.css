@@ -1,13 +1,13 @@
 #gameBoard {
     width:fit-content;
     margin: auto;
-    margin-top: 20px
+    margin-top: 20px;
 }
 #reset, #submit {
-    margin-bottom: 20px
+    margin-bottom: 20px;
 }
 #submit {
-    float: right
+    float: right;
 }
 .mmRow {
     display: flex;
