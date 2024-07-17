@@ -3,6 +3,8 @@ reset.addEventListener('click', resetGame, false);
 let secretCode = null;
 let colors = ["red", "blue", "yellow", "green", "orange", "purple"];
 let selects = document.getElementsByTagName("select");
+let guessCircles = document.querySelectorAll(".color.indicator");
+
 //The background of each select tag should reflect the color option that the user chooses
 for(let select of selects) {
     select.addEventListener('change', changeColor, false);
@@ -16,7 +18,11 @@ function changeColor() {
         this.style.setProperty("color", "black");
     }
 }
+
 let submitButton = document.getElementById("submit");
+
+let guess = [ ];
+
 //reset the game
 resetGame();
 function resetGame() {
@@ -59,3 +65,27 @@ function pickRandomCode() {
 /* The color class name would be the color that you want the indicator to be
 such as "red", "blue", "black", "white", etc. The CSS is already set up
 so that the indicator divs will look like circles*/
+
+submitButton.addEventListener('click', submit, false);
+
+// let indicator = docuemnt.getElementsByClassName('color indicator');
+
+let black = document.getElementsByClassName('black');
+let white = document.getElementsByClassName('white');
+
+function submit() {
+
+for (let select of selects) {
+
+    
+
+    guessIndicator.classList.add('color', guess[i]);
+    guessDiv.appendChild(guessIndicator);
+
+    if (guess[i] == secretCode[i]) {
+        blackCircles++;
+    }
+
+}
+}
+
