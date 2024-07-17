@@ -82,6 +82,7 @@ submit.addEventListener("click", feedback2, false);
 // //Every time the user makes a guess, you need to append a n
 // ew row in the board.
 //I suggest that you make a row look something like this:
+function feedback2(){
 
 let checkAns = document.querySelectorAll(".color.indicator");
 
@@ -97,6 +98,7 @@ function feedback2(){
             }
         }
     }
+}
 }
 
 let feedback = document.getElementsByClassName('feedback');
