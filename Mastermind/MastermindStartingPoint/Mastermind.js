@@ -12,20 +12,41 @@ for(let select of selects) {
     select.addEventListener('change', changeColor, false);
 }
 
+// let gC;
+// for(gC of guessCircles){
+//     gC.addEventListener('change', changeColor, false);
+// }
+
 //change the background color of the select tag to match its value
 function changeColor() {
-    for(let i = 0; i < 4; i ++){
+    //for(let i = 0; i < 4; i ++){
     let color = this.value;
-    guessCircles[i].style.setProperty("background-color", color);
+    //guessCircles[i].style.setProperty("background-color", color);
     this.style.setProperty("background-color", color);
     this.style.setProperty("color", "white");
     if(color === "yellow") {
         this.style.setProperty("color", "black");
     }
-    }
+    //}
 
 }
+
 let submitButton = document.getElementById("submit");
+submitButton.addEventListener("click", changeCircle, false);
+
+// function changeCircle(){
+//     for(let select of selects){
+//         let miao = select.value;
+//         guessCircle.style.setProperty("background-color", miao);
+//         //guessCircles.push(select.value);
+//     }
+// }
+
+function changeCircle(){
+    for(let j = 0; j < 4; j ++){
+        guessCircles[j].style.setProperty("background-color", selects[j].value);
+    }
+}
 
 //reset the game
 resetGame();
