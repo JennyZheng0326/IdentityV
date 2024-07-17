@@ -3,20 +3,30 @@ reset.addEventListener('click', resetGame, false);
 let secretCode = null;
 let colors = ["red", "blue", "yellow", "green", "orange", "purple"];
 let selects = document.getElementsByTagName("select");
+//let guessCircle = document.getElementsByClassName("color indicator");
+let guessCircles = document.querySelectorAll(".color.indicator");
+let showGuess = [];
+
 //The background of each select tag should reflect the color option that the user chooses
 for(let select of selects) {
     select.addEventListener('change', changeColor, false);
 }
+
 //change the background color of the select tag to match its value
 function changeColor() {
+    for(let i = 0; i < 4; i ++){
     let color = this.value;
+    guessCircles[i].style.setProperty("background-color", color);
     this.style.setProperty("background-color", color);
     this.style.setProperty("color", "white");
     if(color === "yellow") {
         this.style.setProperty("color", "black");
     }
+    }
+
 }
 let submitButton = document.getElementById("submit");
+
 //reset the game
 resetGame();
 function resetGame() {
@@ -37,10 +47,12 @@ function pickRandomCode() {
 }
 //You'll need to create an event listener on the submit button for when
 //the user makes a guess.
-    
+submit.addEventListener("click", feedback2, false);
 //Every time the user makes a guess, you need to append a new row in the board.
 //I suggest that you make a row look something like this:
+function feedback2(){
 
+}
 
 // <div class="mmRow">
 //     <div class="guess">
