@@ -41,20 +41,20 @@ function pickRandomCode() {
 //Every time the user makes a guess, you need to append a new row in the board.
 //I suggest that you make a row look something like this:
 
-/*
-    <div class="mmRow">
-        <div class="guess">
-            <div class="color indicator"></div>
-            <div class="color indicator"></div>
-            <div class="color indicator"></div>
-            <div class="color indicator"></div>
-        </div>
-        <div class="feedback">
-            <div class="color indicator"></div>
-            <div class="color indicator"></div>
-        </div>
-    </div>
-*/
+
+// <div class="mmRow">
+//     <div class="guess">
+//         <div class="color indicator"></div>
+//         <div class="color indicator"></div>
+//         <div class="color indicator"></div>
+//         <div class="color indicator"></div>
+//     </div>
+//     <div class="feedback">
+//         <div class="color indicator"></div>
+//         <div class="color indicator"></div>
+//     </div>
+// </div>
+
 
 /* The color class name would be the color that you want the indicator to be
 such as "red", "blue", "black", "white", etc. The CSS is already set up
